@@ -2,8 +2,7 @@ tmp/
 .idea/
 .vscode/
 node_modules/
-docs/index.html
-docs/openapi*.json
+dist/
 .cache/
 .DS_Store
-.env
+.envgit reset

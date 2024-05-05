@@ -4,6 +4,7 @@ import routes from "./router";
 const app = express();
 const port = 5051;
 
+app.use(express.json());
 app.use("/", routes);
 
 app.listen(port, () => {
