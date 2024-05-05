@@ -1,0 +1,9 @@
+tmp/
+.idea/
+.vscode/
+node_modules/
+docs/index.html
+docs/openapi*.json
+.cache/
+.DS_Store
+.env

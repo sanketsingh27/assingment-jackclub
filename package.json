@@ -1,0 +1,20 @@
+{
+  "name": "dynamodb-assingment",
+  "version": "1.0.0",
+  "description": "test assingmnt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dynamo",
+    "db",
+    "node",
+    "js"
+  ],
+  "author": "sanket",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
