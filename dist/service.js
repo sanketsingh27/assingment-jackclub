@@ -8,14 +8,26 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleTransactionRequest = exports.checkBalance = void 0;
+const account_1 = __importDefault(require("./model/account"));
 const checkBalance = (accountId) => __awaiter(void 0, void 0, void 0, function* () {
     return `${accountId} has 100$`;
 });
 exports.checkBalance = checkBalance;
 const handleTransactionRequest = (transaction) => __awaiter(void 0, void 0, void 0, function* () {
     const { accountId, amount, idempotentKey, type } = transaction; // destructure the accountId and amount properties of the {
+    try {
+        const account = yield account_1.default.findOne({ accountId });
+        console.log("====> ", JSON.stringify(account, null, 2));
+    }
+    catch (err) {
+        console.error("Error", err);
+        // Handle the error as needed
+    }
     // id account id is not present in db
     // check balance in db and update it with new balance
     // if (type === "credit") {
